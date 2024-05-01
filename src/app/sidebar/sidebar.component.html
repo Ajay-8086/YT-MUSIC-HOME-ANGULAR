@@ -1,0 +1,8 @@
+<div class="w-full  bg-black flex flex-col items-center   ">
+    <div class="w-[90%] h-[9rem] flex flex-col  mt-3">
+            <app-menu-option *ngFor="let button of buttonContent" [text]="button.text" [icon]="button.icon"> </app-menu-option>
+    </div>
+    <div class="divider"></div>
+    <app-sign-in buttonStyle="sidebar"></app-sign-in>
+
+</div>
