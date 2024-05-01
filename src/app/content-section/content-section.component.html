@@ -1,3 +1,25 @@
 <div class=" w-full flex justify-center">
- <!-- <app-slider></app-slider> -->
+ <div class="mt-3 w-[85%] h-screen flex flex-col justify-around">
+   <div>
+      <app-slider>
+         <app-music-selecton *ngFor="let btn of buttons" [text]="btn.text"></app-music-selecton>
+      </app-slider>
+   </div>
+  <div>
+   <app-slider [sliderHeader]="true">
+      
+   </app-slider>
+  </div>
+  <div>
+   <app-slider [sliderHeader]="true">
+
+   </app-slider>
+  </div>
+  <div>
+   <app-slider [sliderHeader]="true"></app-slider>
+  </div>
+  <div>
+   <app-slider [sliderHeader]="true"></app-slider>
+  </div>
+ </div>
 </div>

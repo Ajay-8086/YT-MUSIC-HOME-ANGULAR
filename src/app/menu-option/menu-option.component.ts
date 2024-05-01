@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class MenuOptionComponent {
   @Input() text:string =''
   @Input() icon?:string = ''
-  @Input() isBlackBg:boolean = true
+  
 }

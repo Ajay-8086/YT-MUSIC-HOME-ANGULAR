@@ -13,10 +13,11 @@ import { SharedModule } from './shared/shared.module';
 import { MenuOptionComponent } from './menu-option/menu-option.component';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { SliderComponent } from './slider/slider.component';
+import { MusicSelectonComponent } from './music-selecton/music-selecton.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent,
+    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent,
   ],
   imports: [
     BrowserModule,

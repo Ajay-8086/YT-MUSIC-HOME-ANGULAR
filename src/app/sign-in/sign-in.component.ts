@@ -7,9 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SignInComponent {
 @Input() buttonStyle:string=''
-ngAfterViewInit(){
-  console.log(this.buttonStyle,'d');
-  
-}
 
 }

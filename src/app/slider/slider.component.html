@@ -1,3 +1,15 @@
-<div class="top-section w-[85%] bg-slate-500 overflow-x-auto flex gap-5">
-        <app-menu-option *ngFor="let btn of buttons" [text]="btn.text"></app-menu-option>
+<div class="text-white" *ngIf="sliderHeader">
+        <h4>start radio</h4>
+        <div class="flex w-full mx-auto items-center justify-between">
+                <h1>QuickPicks</h1>
+                <div class="flex w-[13rem] justify-around">
+                        <button class="play_all">Play All</button>
+                        <button class="p-2 border left-arrow rounded-[50%]"><i class="bi bi-chevron-left text-white opacity-20"></i></button>
+                       <button class="p-2 border left-arrow rounded-[50%]"><i class="bi bi-chevron-right text-white "></i></button>
+                </div>  
+        </div>
+
+</div>
+<div class="top-section w-[90%]  overflow-x-auto flex gap-3">
+        <ng-content></ng-content>
 </div>
