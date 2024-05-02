@@ -6,20 +6,9 @@
       </app-slider>
    </div>
   <div>
-   <app-slider [sliderHeader]="true">
-      
+   <app-slider [sliderHeader]="true"  class="w-full" [gridStyling]="true">
+         <app-songs class="w-full" *ngFor="let song of songDetails" [songs]="song"></app-songs>
    </app-slider>
-  </div>
-  <div>
-   <app-slider [sliderHeader]="true">
-
-   </app-slider>
-  </div>
-  <div>
-   <app-slider [sliderHeader]="true"></app-slider>
-  </div>
-  <div>
-   <app-slider [sliderHeader]="true"></app-slider>
   </div>
  </div>
 </div>

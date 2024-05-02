@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MusicService } from '../services/musicData.service';
+import { Songs } from '../models/songs.interface';
 
 @Component({
   selector: 'app-content-section',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-section.component.css']
 })
 export class ContentSectionComponent {
+  constructor(private musics:MusicService){}
   buttons = [
     {text:'Feel good'},
     {text:'Romance'},
@@ -18,8 +21,7 @@ export class ContentSectionComponent {
     {text:'Sleep'},
     {text:'sad'},
     {text:'Focus'},
-
-
-    
 ]
+songDetails:Songs[] = this.musics.songDetails
+
 }

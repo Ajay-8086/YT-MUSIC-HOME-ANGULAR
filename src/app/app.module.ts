@@ -14,17 +14,20 @@ import { MenuOptionComponent } from './menu-option/menu-option.component';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { SliderComponent } from './slider/slider.component';
 import { MusicSelectonComponent } from './music-selecton/music-selecton.component';
+import { SongsComponent } from './songs/songs.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent,
+    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent, SongsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

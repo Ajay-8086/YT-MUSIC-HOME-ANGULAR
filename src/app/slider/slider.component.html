@@ -1,5 +1,5 @@
-<div class="text-white" *ngIf="sliderHeader">
-        <h4>start radio</h4>
+<div class="text-white" *ngIf="sliderHeader" >
+        <h4></h4>
         <div class="flex w-full mx-auto items-center justify-between">
                 <h1>QuickPicks</h1>
                 <div class="flex w-[13rem] justify-around">
@@ -10,6 +10,6 @@
         </div>
 
 </div>
-<div class="top-section w-[90%]  overflow-x-auto flex gap-3">
+<div class="top-section w-[90%]  overflow-x-auto flex gap-3 " [ngClass]="{'grid-style':gridStyling}">
         <ng-content></ng-content>
 </div>

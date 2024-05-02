@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { flatMap } from 'rxjs';
 
 @Component({
   selector: 'app-slider',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SliderComponent {
    @Input() sliderHeader:boolean=false
+   @Input() gridStyling:boolean = false
 }
