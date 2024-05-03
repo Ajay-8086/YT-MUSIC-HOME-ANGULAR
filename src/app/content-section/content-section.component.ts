@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MusicService } from '../services/musicData.service';
-import { Songs } from '../models/songs.interface';
+import { SliderTop, Songs } from '../models/songs.interface';
 
 @Component({
   selector: 'app-content-section',
@@ -23,5 +23,8 @@ export class ContentSectionComponent {
     {text:'Focus'},
 ]
 songDetails:Songs[] = this.musics.songDetails
-
+sliderTop:SliderTop={
+  title:'START RADIO FROM A SONG',
+  heading:"Quick picks",
+}
 }

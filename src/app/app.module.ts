@@ -16,10 +16,12 @@ import { SliderComponent } from './slider/slider.component';
 import { MusicSelectonComponent } from './music-selecton/music-selecton.component';
 import { SongsComponent } from './songs/songs.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardsComponent } from './cards/cards.component';
+import { ArtistsSectionComponent } from './artists-section/artists-section.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent, SongsComponent,
+    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent, SongsComponent, CardsComponent, ArtistsSectionComponent,
   ],
   imports: [
     BrowserModule,

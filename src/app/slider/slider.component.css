@@ -7,55 +7,58 @@
         background-color: rgb(0, 0, 0);
         color: white;
         border-radius: 20px;
-        border: 1px solid rgb(52, 52, 52);
-    
-    
+        border: 1px solid rgb(52, 52, 52);    
+
 }
 .left-arrow{
-    border:1px solid rgb(255, 255, 255 ,.2)
+
+    color: rgb(255, 255, 255,.2);
+}
+.arrow{
+    border:1px solid rgb(255, 255, 255 ,.2);
 }
 .grid-style {
     display: grid;
-    grid-template-rows: repeat(auto); 
+    grid-template-rows: repeat(auto,4); 
     grid-template-columns: repeat(5, 23rem); 
     width: 100%;
     overflow-x : auto;
     overflow-y: hidden;
-    max-height: 80%;
+    max-height: 92%;
   }
 
-  .grid-style {
+  .slider-style {
     /* Hide the scrollbar by default */
-    scrollbar-width: none; /* For Firefox */
+    scrollbar-width: none; 
     -ms-overflow-style: none; 
     transition: scrollbar-width 0.3s ease, -ms-overflow-style 0.3s ease;
   }
-  
-
-  
-  .grid-style:hover {
+  .slider-style:hover {
 
     scrollbar-width: auto; 
     -ms-overflow-style: auto; 
   }
-  
-  .grid-style:hover::-webkit-scrollbar {
+  .slider-style:hover::-webkit-scrollbar {
     width: auto;
     /* background-color: rgb(0, 0, 0); */
     
   }
-  .grid-style:hover::-webkit-scrollbar-thumb {
+  .slider-style:hover::-webkit-scrollbar-thumb {
     background-color: rgb(110, 110, 110);
     border: 2px solid black;
   }
   /* .grid-style:hover::-webkit-scrollbar-button {
-    background-color: rgb(221, 217, 217);
+   
+    background-color: red;
+    border-radius: 1rem 0 0 0 ;
     width: .5rem;
     height: .5rem;
     
   } */
-
-
-
+ 
+  .playRemove{
+    display: flex;
+    justify-content: center;
+  }
 
   

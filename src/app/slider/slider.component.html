@@ -1,15 +1,14 @@
-<div class="text-white" *ngIf="sliderHeader" >
-        <h4></h4>
+<div class="text-white" *ngIf="sliderHeader">
+        <div class="text-[rgba(255,255,255,0.6)] mb-4">{{sliderTop.title}}</div>
         <div class="flex w-full mx-auto items-center justify-between">
-                <h1>QuickPicks</h1>
-                <div class="flex w-[13rem] justify-around">
-                        <button class="play_all">Play All</button>
-                        <button class="p-2 border left-arrow rounded-[50%]"><i class="bi bi-chevron-left text-white opacity-20"></i></button>
-                       <button class="p-2 border left-arrow rounded-[50%]"><i class="bi bi-chevron-right text-white "></i></button>
+                <div class="text-[2rem] font-extrabold pb-6 ">{{sliderTop.heading}}</div>
+                <div class="flex  justify-around" [ngStyle]="{'width':gridStyling ?'13rem':'6rem'}">
+                        <button class="play_all" *ngIf="gridStyling">Play All</button>
+                        <button class="p-2 border arrow  rounded-[50%]"(click)="backToStart()" [ngClass]="{'left-arrow':isEnableClass}"><i class="bi bi-chevron-left" #chevronLeft></i></button>
+                       <button class="p-2 border arrow rounded-[50%]"><i class="bi bi-chevron-right text-white "></i></button>
                 </div>  
         </div>
-
 </div>
-<div class="top-section w-[90%]  overflow-x-auto flex gap-3 " [ngClass]="{'grid-style':gridStyling}">
+<div class="top-section w-full pb-2  overflow-x-auto flex gap-5 slider-style" [ngClass]="{'grid-style':gridStyling}" (scroll)="onScroll($event)">
         <ng-content></ng-content>
 </div>

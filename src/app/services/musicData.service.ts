@@ -9,7 +9,7 @@ songDetails=[
     {
       "title": "Death Bed",
       "artist": "Powfu",
-      "artwork": "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
+      "artwork":"https://samplesongs.netlify.app/album-arts/death-bed.jpg",
       "url": "https://samplesongs.netlify.app/Death%20Bed.mp3",
       "id": 1
     },
@@ -131,7 +131,19 @@ songDetails=[
       "url": "https://samplesongs.netlify.app/Without%20Me.mp3",
       "id": 18
     },
-      
-    
+    {
+        "title": "Hate Me",
+        "artist": "Ellie Goulding",
+        "artwork": "https://samplesongs.netlify.app/album-arts/hate-me.jpg",
+        "url": "https://samplesongs.netlify.app/Hate%20Me.mp3",
+        "id": 16
+      },
+      {
+        "title": "Solo",
+        "artist": "Clean Bandit",
+        "artwork": "https://samplesongs.netlify.app/album-arts/solo.jpg",
+        "url": "https://samplesongs.netlify.app/Solo.mp3",
+        "id": 17
+      },
   ]
 }

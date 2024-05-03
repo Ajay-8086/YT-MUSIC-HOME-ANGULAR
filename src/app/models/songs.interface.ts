@@ -5,3 +5,7 @@ export interface Songs{
     url:string,
     id:number
 }
+export interface SliderTop{
+    title:string,
+    heading:string
+}
