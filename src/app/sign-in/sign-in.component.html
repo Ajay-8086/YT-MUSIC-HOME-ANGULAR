@@ -1,1 +1,8 @@
-<button  [ngClass]="buttonStyle=='sidebar'?'sidebar':'sign-in-button'" class="my-auto"><ng-content></ng-content></button>
+<button  [ngClass]="{
+    'sidebar':buttonStyle=='sidebar',
+    'register':buttonStyle=='register',
+    'google':buttonStyle=='google',
+    'login':buttonStyle=='login',
+    'sign-in-button':'default:'
+    }" 
+class="my-auto" (click)="openDialogPopup()"><ng-content></ng-content></button>

@@ -42,4 +42,9 @@ export class SliderComponent {
    }
 
   }
+
+  // hoverd event 
+  onMouseEntern(){
+    
+  }
 }

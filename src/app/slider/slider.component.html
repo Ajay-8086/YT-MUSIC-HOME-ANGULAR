@@ -9,6 +9,6 @@
                 </div>  
         </div>
 </div>
-<div class="top-section w-full pb-2  overflow-x-auto flex gap-5 slider-style" [ngClass]="{'grid-style':gridStyling}" (scroll)="onScroll($event)">
-        <ng-content></ng-content>
+<div class="top-section w-full pb-2  overflow-x-auto flex gap-5 slider-style" [ngClass]="{'grid-style':gridStyling}" (scroll)="onScroll($event)" (mouseenter)="onMouseEntern()" >
+        <ng-content ></ng-content>
 </div>

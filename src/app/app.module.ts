@@ -19,10 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardsComponent } from './cards/cards.component';
 import { ArtistsSectionComponent } from './artists-section/artists-section.component';
 import { SmallScreenSignInComponent } from './small-screen-sign-in/small-screen-sign-in.component';
-
+import { AuthModule } from './auth/auth.module';
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent, SongsComponent, CardsComponent, ArtistsSectionComponent, SmallScreenSignInComponent,
+    AppComponent,HeaderComponent, SearchBarComponent, HamburgerMenuComponent, SettingsMenuComponent, SidebarComponent, MenuOptionComponent, ContentSectionComponent, SliderComponent, MusicSelectonComponent, SongsComponent, CardsComponent, ArtistsSectionComponent, SmallScreenSignInComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,10 @@ import { SmallScreenSignInComponent } from './small-screen-sign-in/small-screen-
     BrowserAnimationsModule,
     MatIconModule,
     SharedModule,
-    HttpClientModule
+    AuthModule,
+    HttpClientModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../auth/popup/popup.component';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,6 +8,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-@Input() buttonStyle:string=''
+  constructor(private dialogRef:MatDialog){}
+@Input() buttonStyle:string='default'
+openDialogPopup(){  
+this.dialogRef.open(PopupComponent)
+}
 
 }

@@ -2,6 +2,6 @@
     opacity: 0;
     transition: all ease;
 }
-.play-button:hover .fa-caret-right,.fa-ellipsis-vertical{
+.play-button:hover .fa-caret-right, .play-button:hover .fa-ellipsis-vertical {
     opacity: 1;
 }

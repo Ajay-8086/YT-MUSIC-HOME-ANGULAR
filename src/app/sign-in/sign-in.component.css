@@ -15,3 +15,35 @@
     border-radius: 30px;
     width: 100%;
 }
+.register{
+    padding: .5rem 1.25rem;
+    margin-left: .75rem;
+    background:red;
+    color: white;
+}
+.login{
+
+}
+.google{
+    background:white;
+    /* border: 1px solid; */
+    border-radius: .75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    padding: .5rem 0;
+    margin-top: 1.25rem;
+}
+.login{
+    width: 100%;
+    color: white;
+    padding: .75rem 1rem;
+    margin-top: 1.5rem;
+    background: red;
+}
+.login:focus ,.login:hover ,.register:hover{
+    background: #000;
+    color: white;
+}
