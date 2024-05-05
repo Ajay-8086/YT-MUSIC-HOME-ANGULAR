@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'yt-music';
+   btnClicking:boolean = false
+    menuClick(event:boolean){
+      this.btnClicking = event  
+      console.log(this.btnClicking,'ss');
+      
+    }
 }

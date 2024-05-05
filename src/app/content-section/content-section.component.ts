@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { MusicService } from '../services/musicData.service';
 import { SliderTop, Songs } from '../models/songs.interface';
 
@@ -23,8 +23,9 @@ export class ContentSectionComponent {
     {text:'Focus'},
 ]
 songDetails:Songs[] = this.musics.songDetails
-sliderTop:SliderTop={
-  title:'START RADIO FROM A SONG',
-  heading:"Quick picks",
+sliderTop!:SliderTop
+@Input() changeWidth:boolean=false
+setSliderTop(header:SliderTop){
+this.sliderTop = header
 }
 }

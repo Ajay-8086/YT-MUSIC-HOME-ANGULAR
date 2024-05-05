@@ -1,13 +1,13 @@
 <div class=" w-full overflow-y-hidden">
     <div>
-        <app-header></app-header>
+        <app-header (menuOption)="menuClick($event)"></app-header>
     </div>
-    <div class="flex  bg-black contentBody ">
-        <div class="w-1/6 side-bar">
-            <app-sidebar></app-sidebar>
+    <div class="flex  bg-black contentBody w-full">
+        <div class="w-1/6 side-bar transition duration-1000 ease-in" [ngClass]="{'collapsed':btnClicking}" >
+            <app-sidebar [menuClicked]="btnClicking"></app-sidebar>
         </div>
-        <div class="w-5/6 overflow-auto ">
-            <app-content-section ></app-content-section>
+        <div class="w-5/6 overflow-y-auto  " [ngClass]="{expand:btnClicking}">
+            <app-content-section [changeWidth]="btnClicking"></app-content-section>
         </div>
     </div>
 </div>

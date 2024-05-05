@@ -1,5 +1,5 @@
 <div class=" w-full flex justify-center content" >
- <div class="mt-3 w-[85%] h-auto flex flex-col  ">
+ <div class="mt-3  h-auto flex flex-col  " [ngStyle]="changeWidth?{'width':'100%'}:{'width':'85%'}">
    <div class="mt-5">
       <!-- slider component -->
       <app-slider>
@@ -9,22 +9,22 @@
    </div>
 
 
-  <div class="w-[98%] h-[20rem] mt-12 mb-14">
+  <div class="w-[98%] h-[20rem] mt-12 mb-14  ">
    <app-slider [sliderHeader]="true"  class="w-full" [sliderTop]="sliderTop" [gridStyling]="true" >
       <!-- songs with its details component  -->
         <div *ngFor="let song of songDetails" class="h-[3rem]">
-         <app-songs class="w-full" [songs]="song" ></app-songs>
+         <app-songs class="w-full" [songs]="song"  ></app-songs>
         </div>
    </app-slider>
   </div>
   
 
   <!-- Albums list showing slider  -->
-  <div class="my-11 w-[98%]">
+  <div class=" mt-10 w-[98%]  h-[18rem]">
    <app-slider [sliderHeader]="true" class="w-full" [sliderTop]="sliderTop">
       <!-- Albums with its details component  -->
-        <div *ngFor="let song of songDetails" class="h-[13rem]">
-         <app-cards class="w-full" [songs]="song" ></app-cards>
+        <div *ngFor="let song of songDetails" >
+         <app-cards class="w-full" [songs]="song" (header)="setSliderTop($event)" ></app-cards>
         </div>
    </app-slider>
   </div>
@@ -34,5 +34,25 @@
    <app-artists-section></app-artists-section>
   </div>
 
+
+  <!-- Albums list showing slider  -->
+  <div class=" mt-10 w-[98%]  h-[18rem]">
+   <app-slider [sliderHeader]="true" class="w-full" [sliderTop]="sliderTop">
+      <!-- Albums with its details component  -->
+        <div *ngFor="let song of songDetails" >
+         <app-cards class="w-full" [songs]="song" (header)="setSliderTop($event)" ></app-cards>
+        </div>
+   </app-slider>
+  </div>
+
+  <!-- Albums list showing slider  -->
+  <div class=" mt-10 w-[98%]  h-[18rem]">
+   <app-slider [sliderHeader]="true" class="w-full" [sliderTop]="sliderTop">
+      <!-- Albums with its details component  -->
+        <div *ngFor="let song of songDetails" >
+         <app-cards class="w-full" [songs]="song" (header)="setSliderTop($event)" ></app-cards>
+        </div>
+   </app-slider>
+  </div>
  </div>
 </div>

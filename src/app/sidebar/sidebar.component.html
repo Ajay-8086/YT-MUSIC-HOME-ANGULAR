@@ -1,10 +1,16 @@
-<div class="w-full  bg-black flex overflow-hidden flex-col items-center">
-    <div class="w-[90%] h-[9rem] md:gap-0  flex flex-col  mt-3">
-            <app-menu-option *ngFor="let button of buttonContent" [text]="button.text" [icon]="button.icon"> </app-menu-option>
+<div class="w-full  bg-black flex overflow-hidden flex-col items-center  transition duration-1000 ease-in" [ngClass]="{'collapsed':menuClicked}">
+    <div class="w-[90%] h-[9rem] md:gap-0  flex flex-col  mt-3  ">
+            <app-menu-option *ngFor="let button of buttonContent "  [menuClicked]="menuClicked" [text]="button.text" [icon]="button.icon"> </app-menu-option>
     </div>
-    <div class="divider"></div>
-    <div class="w-[90%]">
+    <div class="divider" [ngClass]="{dividerChange:menuClicked}"></div>
+    <div class="w-[90%]" *ngIf="!menuClicked; else largeScreen">
         <app-sign-in buttonStyle="sidebar">Sign in</app-sign-in>
+       
     </div>
+    <ng-template #largeScreen>
+        <div class="-mt-10 ml-[.6rem]">
+            <app-small-screen-sign-in></app-small-screen-sign-in>
+        </div>
+    </ng-template>
 
 </div>

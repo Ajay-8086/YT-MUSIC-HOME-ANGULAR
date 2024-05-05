@@ -1,5 +1,11 @@
-<div class="w-[10rem]  flex flex-col h-[90%] justify-around items-start mt-2">
-    <img src="{{songs.artwork}}" class="w-full h-[8rem]" alt="">
+<div class="w-[10rem]  flex flex-col h-[90%] justify-around items-start mt-2 play-button">
+    <div class="relative">
+        <i class="fa-solid fa-ellipsis-vertical text-white text-lg absolute right-[2rem] font-semibold top-1"></i>
+    </div>
+    <img src="{{songs.artwork}}" class="w-full h-[8rem] " alt="">
+    <div class="relative">
+        <i class="fa-solid fa-caret-right bg-[rgba(0,0,0,0.7)] text-white p-[0.4rem]  rounded-[50%] text-2xl absolute right-[2rem] bottom-3"></i>
+    </div>
    <div class="">
     <div class="text-white font-bold">{{songs.title}}</div>
     <div class="text-[rgb(255,255,255,.7)]">{{songs.artist}}</div>

@@ -4,3 +4,19 @@
  .contentBody{
     height: calc(100vh - 4rem);
  }
+
+ .collapsed{
+   width: 7%;
+   white-space: nowrap;
+   display: flex;
+   align-items: start;
+   flex-direction: column;
+   margin-right: 3rem;
+
+   text-align: center;
+   height: auto;
+   border: none;
+ }
+ .expand{
+   width:calc(100vw - 7%) ;
+ }

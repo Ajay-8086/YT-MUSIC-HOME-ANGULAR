@@ -1,5 +1,5 @@
-import { Component,  Input } from '@angular/core';
-import {  Songs } from '../models/songs.interface';
+import { Component,  EventEmitter,  Input, Output } from '@angular/core';
+import {  SliderTop, Songs } from '../models/songs.interface';
 
 @Component({
   selector: 'app-cards',
@@ -8,5 +8,13 @@ import {  Songs } from '../models/songs.interface';
 })
 export class CardsComponent {
   @Input() songs!:Songs
+  @Output() header =  new EventEmitter<SliderTop>()
+
+  ngAfterViewInit(){
+    this.header.emit({
+      title:'START RADIO FROM A SONG',
+      heading:"Quick picks",
+    })
+  }
   
 }

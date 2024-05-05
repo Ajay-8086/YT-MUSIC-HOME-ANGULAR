@@ -1,13 +1,13 @@
 <div class=" nav bg-black w-full flex  items-center h-[4rem] justify-around ">
-  <div class=" items-center w-[19%]  align-middle">
+  <div class="  w-[19%]  ">
     <div class="flex w-[50%] items-center justify-around ">
-      <app-hamburger-menu class="mb-2"></app-hamburger-menu>
+      <app-hamburger-menu class="mb-2" (btnClicked)="menuClick($event)"></app-hamburger-menu>
       <div class="hidden md:block w-[60%]">
         <img src="../../assets/on_platform_logo_dark.svg" alt="">
       </div>
     </div>
   </div>
-  <div class="w-[61%]  ">
+  <div class="w-[61%]" [ngStyle]="menuClicked?{'margin-right':'9rem'}:{'margin-left':'6rem'}">
     <app-search-bar></app-search-bar>
   </div>
 
