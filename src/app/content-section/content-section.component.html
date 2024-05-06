@@ -2,16 +2,17 @@
  <div class="mt-3  h-auto flex flex-col  " [ngStyle]="changeWidth?{'width':'100%'}:{'width':'85%'}">
    <div class="mt-5">
       <!-- slider component -->
-      <app-slider>
+      <app-slider *ngFor="let slides of ">
          <!-- options for selecting the song component  -->
          <app-music-selecton *ngFor="let btn of buttons" [text]="btn.text"></app-music-selecton>
       </app-slider>
    </div>
 
 
+   <!-- songs with its details component  -->
   <div class="w-[98%] h-[20rem] mt-12 mb-14  ">
+   
    <app-slider [sliderHeader]="true"  class="w-full" [sliderTop]="sliderTop" [gridStyling]="true" >
-      <!-- songs with its details component  -->
         <div *ngFor="let song of songDetails" class="h-[3rem]">
          <app-songs class="w-full" [songs]="song"  ></app-songs>
         </div>
