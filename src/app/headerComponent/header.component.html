@@ -14,8 +14,9 @@
   <div class="align-middle flex justify-center   max-w-[20%] min-w-[25%] ">
     <app-settings-menu></app-settings-menu>
     <div class="w-[21%]">
-      <app-sign-in>Sign in</app-sign-in>
-
+      <app-sign-in  *ngIf="!isLoggedIn">Sign in</app-sign-in>
+      
+         <mat-icon class="text-white" *ngIf="isLoggedIn" (click)="logout()" >logout</mat-icon>
     </div>
   </div>
 </div>

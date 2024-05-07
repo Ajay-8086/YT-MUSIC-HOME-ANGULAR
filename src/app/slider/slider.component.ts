@@ -11,21 +11,12 @@ export class SliderComponent {
   
    @Input() sliderHeader:boolean=false
    @Input() gridStyling:boolean = false
-   @Input() sliderTop:SliderTop ={
-    title:'',
-    heading:''
-   }
+
    scrollElement!:HTMLElement
    isEnableClass:boolean=true
    @HostListener('scroll',['$event']) onScroll(event:Event){
     const element = event.target as HTMLElement;
     this.scrollElement = element
-    // console.log(element.scrollWidth,'das');
-    // console.log(element.scrollLeft,'ss');
-    
-    // const atEnd = element.scrollLeft  == (element.clientWidth/3);
-    // console.log(atEnd);
-    //scroll arrow color change on the slider
     if(element.scrollLeft==0){  
       this.isEnableClass = true
     }else{
